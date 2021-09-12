@@ -778,6 +778,7 @@ textarea::placeholder {
 .terms-input:checked + span .icon-check {
   background-color: var(--active-color);
   border-color: var(--active-color);
+  box-shadow: 0 4px 4px #00000040;
 }
 
 .submit {
