@@ -393,7 +393,7 @@ img {
 }
 .client-icon {
   fill: #afb1b8;
-  transition: fill 250ms;
+  transition: fill var(--time-anim) var(--trform-style);
 }
 .client-link:hover,
 .client-link:focus {
@@ -528,7 +528,7 @@ img {
 .filter-button:focus {
   color: var(--activebutton-textcolor);
   background-color: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px #00000040;
 }
 .filter {
   padding-top: 94px;
@@ -660,16 +660,18 @@ img {
   position: absolute;
   top: 8px;
   right: 8px;
+
+  transition: fill var(--time-anim) var(--trform-style);
 }
 .btn-close:hover,
 .btn-close:focus .close-icon {
   fill: var(--active-color);
 }
-/* .backdrop.is-hidden {
+.backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-} */
+}
 .modal p {
   padding-bottom: 30px;
   color: var(--maintext-color);
@@ -699,6 +701,8 @@ img {
 
   border: 1px solid #21212133;
   border-radius: 4px;
+
+  transition: border-color var(--time-anim) var(--trform-style);
 }
 .form-icons {
   width: 18px;
@@ -709,6 +713,9 @@ img {
   top: 50%;
   transform: translateY(-50%);
   left: 11px;
+
+  transition: border-color var(--time-anim) var(--trform-style),
+    fill var(--time-anim) var(--trform-style);
 }
 .form-inputs textarea {
   width: 448px;
@@ -760,18 +767,17 @@ textarea::placeholder {
   width: 16px;
   height: 15px;
 
-  border: 1px solid var(--active-color);
+  border: 1px solid #000000;
   border-radius: 2px;
+  fill: white;
 
   position: absolute;
   top: 2px;
-  left: 10px;
+  left: 12px;
 }
-.terms-input:checked + .icon-check {
+.terms-input:checked + span .icon-check {
   background-color: var(--active-color);
-  background-image: url(../images/icon-check.svg);
-  background-size: contain;
-  background-origin: border-box;
+  border-color: var(--active-color);
 }
 
 .submit {

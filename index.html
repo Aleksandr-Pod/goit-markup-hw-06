@@ -582,8 +582,13 @@
         </div>
         <div class="subscription-block">
           <p>Подпишитесь на рассылку</p>
-          <form action="#" class="email-field" autocomplete="off">
-            <input type="email" name="email" placeholder="E-mail" />
+          <form action="#" class="email-field">
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              autocomplete="off"
+            />
             <button type="submit" class="subscription-btn">
               Подписаться
               <svg class="icon-send">
@@ -608,7 +613,7 @@
             <li class="form-item">
               <label
                 >Имя
-                <input type="text" name="person-name" id="p-name" />
+                <input type="text" name="person-name" />
                 <svg class="form-icons">
                   <use href="./images/icons.svg#icon-person"></use>
                 </svg>
@@ -648,10 +653,11 @@
               >Соглашаюсь с рассылкой и принимаю
               <span><a href="" noopener noreferer>Условия договора</a></span>
               <input type="checkbox" name="terms" class="terms-input" />
-              <span class="icon-check"></span>
-              <!-- <svg class="icon-check">
-                <use href="./images/icons.svg#icon-check"></use>
-              </svg> -->
+              <span>
+                <svg class="icon-check">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
             </label>
           </div>
           <button type="submit" class="submit btn">Отправить</button>
