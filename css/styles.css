@@ -680,46 +680,41 @@ img {
   letter-spacing: 0.03em;
   text-align: center;
 }
-.modal-inputs {
-  /* display: flex;
-  flex-direction: column; */
+.form-inputs {
   margin-bottom: 20px;
 }
-.modal-item {
+.form-item label {
+  display: block;
+
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+
   position: relative;
 }
-.modal-item input {
+.form-item input {
   width: 100%;
-  margin-bottom: 28px;
+  margin: 4px 0 10px;
   padding: 11px 12px 11px 36px;
 
   border: 1px solid #21212133;
-
   border-radius: 4px;
 }
-.modal-icons {
+.form-icons {
   width: 18px;
   height: 18px;
   fill: var(--maintext-color);
 
   position: absolute;
-  top: 11px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 11px;
 }
-.modal-item label {
-  font-size: 12px;
-  line-height: calc(14 / 12);
-  letter-spacing: 0.01em;
-
-  position: absolute;
-  top: -18px;
-  left: 0;
-}
-.modal-inputs textarea {
+.form-inputs textarea {
   width: 448px;
   height: 120px;
   padding: 12px 16px;
-  margin-bottom: 20px;
+  margin: 4px 0 20px;
 
   border: 1px solid #21212133;
   border-radius: 4px;
@@ -733,14 +728,14 @@ textarea::placeholder {
   line-height: calc(16 / 14);
   letter-spacing: 0.01em;
 }
-.modal-item input:hover,
-.modal-item input:focus,
-.modal-item textarea:hover,
-.modal-item textarea:focus {
+.form-item input:hover,
+.form-item input:focus,
+.form-item textarea:hover,
+.form-item textarea:focus {
   border-color: var(--active-color);
 }
-.modal-item input:hover + svg,
-.modal-item input:focus + svg {
+.form-item input:hover + svg,
+.form-item input:focus + svg {
   fill: var(--active-color);
 }
 .terms-block {
@@ -748,7 +743,6 @@ textarea::placeholder {
 }
 .terms-label {
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   padding-left: 20px;
   font-size: 14px;
@@ -766,11 +760,8 @@ textarea::placeholder {
   width: 16px;
   height: 15px;
 
-  /* fill: #ffffff; */
-
   border: 1px solid var(--active-color);
   border-radius: 2px;
-  /* background-image: url(../images/icon-check.svg); */
 
   position: absolute;
   top: 2px;
@@ -782,9 +773,6 @@ textarea::placeholder {
   background-size: contain;
   background-origin: border-box;
 }
-/* .terms-input:checked + .icon-check {
-  fill: rgb(25, 0, 255);
-} */
 
 .submit {
   display: block;
