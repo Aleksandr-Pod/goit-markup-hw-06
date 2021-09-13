@@ -448,7 +448,6 @@ img {
 }
 .social-block p,
 .subscription-block p {
-  margin-top: 20px;
   margin-bottom: 20px;
 
   color: #ffffff;
@@ -673,7 +672,7 @@ img {
   pointer-events: none;
 }
 .modal p {
-  padding-bottom: 30px;
+  margin-bottom: 12px;
   color: var(--maintext-color);
 
   font-size: 20px;
@@ -682,9 +681,7 @@ img {
   letter-spacing: 0.03em;
   text-align: center;
 }
-.form-inputs {
-  margin-bottom: 20px;
-}
+
 .form-item label {
   display: block;
 
@@ -697,7 +694,7 @@ img {
 .form-item input {
   width: 100%;
   margin: 4px 0 10px;
-  padding: 11px 12px 11px 36px;
+  padding: 12px 12px 12px 36px;
 
   border: 1px solid #21212133;
   border-radius: 4px;
@@ -710,13 +707,14 @@ img {
   fill: var(--maintext-color);
 
   position: absolute;
-  top: 50%;
+  top: calc(50% + 4px);
   transform: translateY(-50%);
   left: 11px;
 
   transition: border-color var(--time-anim) var(--trform-style),
     fill var(--time-anim) var(--trform-style);
 }
+
 .form-inputs textarea {
   width: 448px;
   height: 120px;
