@@ -40,11 +40,6 @@ h6 {
   text-decoration: none;
   transition: color var(--time-anim) var(--trform-style);
 }
-.header-menu-item .link,
-.header-nav .logo {
-  color: var(--maintext-color);
-}
-
 .link:hover,
 .link:focus {
   color: var(--active-color);
@@ -71,18 +66,17 @@ h6 {
 }
 
 .logo {
+  color: var(--maintext-color);
+
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-
-  color: black;
 }
 .logoletter {
   color: var(--active-color);
 }
-
 .header-nav {
   display: flex;
   align-items: center;
@@ -94,21 +88,19 @@ h6 {
 .header-menu-item:not(:last-child) {
   margin-right: 50px;
 }
-.header-menu-item {
+.header-menu-link {
+  padding: 32px 0;
+  color: var(--maintext-color);
   position: relative;
 }
-.header-menu-item .link {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-.link.current::after {
+.current::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 4px;
   border-radius: 4px;
   background-color: var(--active-color);
-  bottom: -33px;
+  bottom: -1px;
   left: 0;
 }
 .header-addr {
@@ -121,7 +113,7 @@ h6 {
   padding-bottom: 32px;
   align-items: center;
 }
-.item + .item {
+.headder-addr-item + .headder-addr-item {
   margin-left: 50px;
 }
 
@@ -140,6 +132,8 @@ h6 {
   fill: var(--active-color);
 }
 
+/*  ---------  HERO  --------- */
+
 .hero {
   max-width: 1600px;
   padding-top: 200px;
@@ -155,13 +149,13 @@ h6 {
   margin: 0 auto;
   text-align: center;
 
+  color: #ffffff;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
-  color: #ffffff;
 }
 .hero-button {
   display: block;
@@ -196,7 +190,7 @@ h6 {
   margin-right: 30px;
 }
 
-.features-list-header {
+.features-item-header {
   margin-bottom: 10px;
   font-weight: bold;
   font-size: 14px;
@@ -206,7 +200,7 @@ h6 {
 
   color: var(--maintext-color);
 }
-.features-list-text {
+.features-item-text {
   padding-right: 10px;
 
   font-size: 14px;
@@ -219,14 +213,17 @@ h6 {
   background-color: #f5f4fa;
   border-radius: 4px;
 }
-.features-items .icon {
+.features-icon {
   height: 70px;
   width: 70px;
+}
+.what-we-do {
+  padding-bottom: 94px;
 }
 img {
   display: block;
 }
-.what-we-do-header {
+.what-we-do__header {
   text-align: center;
   margin-bottom: 50px;
 
@@ -237,16 +234,13 @@ img {
 
   color: var(--maintext-color);
 }
-.what-we-do {
-  padding-bottom: 94px;
-}
-.what-we-do-list {
+.what-we-do__list {
   display: flex;
 }
 .what-we-do-item {
   position: relative;
 }
-.what-we-do-item p {
+.what-we-do-item__text {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -274,7 +268,7 @@ img {
   background-color: #f5f4fa;
 }
 
-.team-header {
+.team__header {
   text-align: center;
   margin-bottom: 50px;
 
@@ -285,7 +279,7 @@ img {
 
   color: var(--maintext-color);
 }
-.team-list {
+.team__list {
   display: flex;
 }
 .team-item:not(:last-child) {
@@ -301,7 +295,7 @@ img {
   padding: 30px 32px;
   text-align: center;
 }
-.team-name {
+.team-data__name {
   margin-bottom: 10px;
 
   font-weight: 500;
@@ -311,21 +305,21 @@ img {
 
   color: var(--maintext-color);
 }
-.team-prof {
+.team-data__prof {
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
-.social-icons {
+.soc-icons-block {
   display: flex;
   justify-content: center;
 }
-.social-icon-block {
+.soc-icons-block__item {
   height: 44px;
   width: 44px;
 }
-.social-icon-block:not(:last-child) {
+.soc-icons-block__item:not(:last-child) {
   margin-right: 10px;
 }
 .soc-icon {
@@ -358,7 +352,7 @@ img {
 .clients {
   padding: 94px 0;
 }
-.clients-header {
+.clients__header {
   text-align: center;
   margin-bottom: 50px;
 
@@ -369,7 +363,7 @@ img {
 
   color: var(--maintext-color);
 }
-.clients-list {
+.clients__list {
   display: flex;
   margin: 0;
 }
@@ -414,7 +408,7 @@ img {
 .footer .container {
   display: flex;
 }
-.footerlogo {
+.logo-footer {
   color: #ffffff;
 }
 .footer-addressletter {
@@ -446,6 +440,9 @@ img {
   margin-top: 12px;
   margin-bottom: 40px;
 }
+.subscription-block {
+  margin-left: auto;
+}
 .social-block p,
 .subscription-block p {
   margin-bottom: 20px;
@@ -458,24 +455,11 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-.f-social-icons {
-  display: flex;
-}
-.f-social-icon-block {
-  height: 44px;
-  width: 44px;
-}
-.f-social-icon-block:not(:last-child) {
-  margin-right: 10px;
-}
-.f-soc-icon {
-  width: 20px;
-  height: 20px;
+
+.soc-icon--f {
   fill: var(--activebutton-textcolor);
 }
-.subscription-block {
-  margin-left: auto;
-}
+
 .subscription-block input {
   padding: 15px 16px;
   margin-right: 12px;
